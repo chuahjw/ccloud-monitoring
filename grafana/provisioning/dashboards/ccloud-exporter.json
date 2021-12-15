@@ -161,7 +161,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "rate(confluent_kafka_server_received_bytes{topic=~\"$topic\", kafka_id=~\"$cluster\"}[$__rate_interval])",
+          "expr": "sum(confluent_kafka_server_received_bytes{topic=~\"$topic\", kafka_id=~\"$cluster\"}/60)",
           "interval": "",
           "legendFormat": "{{cluster}}",
           "refId": "A"
@@ -230,7 +230,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "rate(confluent_kafka_server_sent_bytes{topic=~\"$topic\", kafka_id=~\"$cluster\"}[$__rate_interval])",
+          "expr": "sum(confluent_kafka_server_sent_bytes{topic=~\"$topic\", kafka_id=~\"$cluster\"}/60)",
           "interval": "",
           "legendFormat": "{{cluster}}",
           "refId": "A"
@@ -368,7 +368,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "sum(confluent_kafka_server_retained_bytes{topic=~\"$topic\", kafka_id=~\"$cluster\"})/3",
+          "expr": "sum(confluent_kafka_server_retained_bytes{topic=~\"$topic\", kafka_id=~\"$cluster\"})",
           "interval": "",
           "legendFormat": "{{cluster}}",
           "refId": "A"
