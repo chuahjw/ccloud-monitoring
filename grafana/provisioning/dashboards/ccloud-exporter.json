@@ -1862,6 +1862,7 @@
     "to": "now"
   },
   "timepicker": {
+    "nowDelay": "2m",
     "refresh_intervals": [
       "5s",
       "10s",

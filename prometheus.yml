@@ -3,7 +3,6 @@ scrape_configs:
     scrape_interval: 1m
     scrape_timeout: 1m
     honor_timestamps: true
-    honor_labels: true
     static_configs:
       - targets:
         - api.telemetry.confluent.cloud
