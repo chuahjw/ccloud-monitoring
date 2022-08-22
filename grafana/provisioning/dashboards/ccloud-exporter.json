@@ -509,7 +509,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "avg(confluent_kafka_server_active_connection_count{kafka_id=~\"$cluster\"})",
+          "expr": "sum(confluent_kafka_server_active_connection_count{kafka_id=~\"$cluster\"})",
           "hide": false,
           "interval": "",
           "legendFormat": "{{cluster}}",
